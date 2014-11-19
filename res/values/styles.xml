@@ -6,4 +6,6 @@
         <item name="colorPrimaryDark">#2A56C6</item>
     </style>
 
+    <style name="FullScreen" parent="@android:style/Theme.Black.NoTitleBar.Fullscreen"></style>
+
 </resources>

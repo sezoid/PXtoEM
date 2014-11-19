@@ -11,5 +11,8 @@
     <string name="info"><b>Author:</b> Sezyara (SZ)\n<b>Version:</b> 1.0</string>
     <string name="res">Result:</string>
     <string name="table">Baseline Values</string>
+    <string name="title_activity_splash_screen">PX to EM</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
 
 </resources>
