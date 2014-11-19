@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="action_info">О приложении</string>
+    <string name="action_table">Базовые значения</string>
+    <string name="app_name">PX в EM</string>
+    <string name="clean">Очистить</string>
+    <string name="convert">Конвертировать</string>
+    <string name="error">Ошибка: введите число пикселей!</string>
+    <string name="hint">Введите число пикселей</string>
+    <string name="info"><b>Автор:</b> Sezyara (SZ)\n<b>Версия:</b> 1.0</string>
+    <string name="res">Результат:</string>
+    <string name="table">Базовые значения</string>
+
+</resources>
