@@ -1,7 +1,7 @@
 PXtoEM v2.0
 ======
 
-Converter from PX to EM for Web-Developers. Android: 2.3.3 - 5.0
+Converter from PX to EM for Web-Developers. Android: 3.0 - 5.0
 
 <b>Languages:</b>
 - English
