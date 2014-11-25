@@ -2,8 +2,10 @@ package ru.sezex.pxtoem;
 
 import android.support.v7.app.ActionBarActivity;
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -77,11 +79,37 @@ public class MainActivity extends ActionBarActivity {
 			Intent tobase = new Intent(MainActivity.this, TableActivity.class);
 			startActivity(tobase);
 		}
+		if (id == R.id.support) {
+			Intent intent = new Intent(Intent.ACTION_VIEW,
+					Uri.parse("mailto:roman@sezex.ru?subject=PXtoEM"));
+			startActivity(intent);
+		}
 		if (id == R.id.info) {
 			AlertDialog.Builder builder = new AlertDialog.Builder(
 					MainActivity.this);
-			builder.setTitle(R.string.app_name).setMessage(R.string.info)
-					.setCancelable(true);
+			builder.setTitle(R.string.app_name)
+					.setCancelable(true)
+					.setMessage(getString(R.string.info))
+					.setPositiveButton(R.string.web,
+							new DialogInterface.OnClickListener() {
+								public void onClick(DialogInterface dialog,
+										int id) {
+									Intent intent = new Intent(
+											Intent.ACTION_VIEW,
+											Uri.parse("http://sezex.ru/pxtoem/"));
+									startActivity(intent);
+								}
+							})
+					.setNegativeButton(R.string.source,
+							new DialogInterface.OnClickListener() {
+								public void onClick(DialogInterface dialog,
+										int id) {
+									Intent intent = new Intent(
+											Intent.ACTION_VIEW,
+											Uri.parse("http://github.com/sezoid/PXtoEM/"));
+									startActivity(intent);
+								}
+							});
 			AlertDialog Info = builder.create();
 			Info.show();
 		}
