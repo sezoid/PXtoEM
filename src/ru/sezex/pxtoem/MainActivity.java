@@ -6,13 +6,16 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
+import android.view.KeyEvent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.TextView.OnEditorActionListener;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -29,6 +32,37 @@ public class MainActivity extends ActionBarActivity {
 
 		RESULT = (TextView) findViewById(R.id.result);
 		PX = (EditText) findViewById(R.id.px);
+
+		PX.setOnEditorActionListener(new OnEditorActionListener() {
+			@Override
+			public boolean onEditorAction(TextView v, int actionId,
+					KeyEvent event) {
+				boolean handled = false;
+				if (actionId == EditorInfo.IME_ACTION_DONE) {
+					try {
+						a = Double.parseDouble(PX.getText().toString());
+						b = 16;
+
+					} catch (NumberFormatException e) {
+						a = 0;
+						b = 0;
+					}
+
+					if (PX.getText().toString().equals("")) {
+						RESULT.setTextColor(Color.parseColor("#F44336"));
+						RESULT.setText(getString(R.string.error));
+					} else {
+						c = a / b;
+						java.math.BigDecimal x = new java.math.BigDecimal(c);
+						x = x.setScale(3, java.math.BigDecimal.ROUND_HALF_UP);
+						RESULT.setTextColor(Color.parseColor("#4285F4"));
+						RESULT.setText(getString(R.string.res) + " " + x + "em");
+					}
+					handled = true;
+				}
+				return handled;
+			}
+		});
 
 		final Button ConvertButton = (Button) findViewById(R.id.ConvertButton);
 		ConvertButton.setOnClickListener(new View.OnClickListener() {
