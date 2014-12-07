@@ -1,5 +1,7 @@
 package ru.sezex.pxtoem;
 
+import java.util.ArrayList;
+
 import android.support.v7.app.ActionBarActivity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -12,8 +14,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
 
@@ -22,6 +26,7 @@ public class MainActivity extends ActionBarActivity {
 	double a, b, c;
 	TextView RESULT;
 	EditText PX;
+	ListView HISTORY;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +37,13 @@ public class MainActivity extends ActionBarActivity {
 
 		RESULT = (TextView) findViewById(R.id.result);
 		PX = (EditText) findViewById(R.id.px);
+		HISTORY = (ListView) findViewById(R.id.historyListView);
+
+		final ArrayList<String> list = new ArrayList<String>();
+		final ArrayAdapter<String> adapter;
+		adapter = new ArrayAdapter<String>(this,
+				android.R.layout.simple_list_item_1, list);
+		HISTORY.setAdapter(adapter);
 
 		PX.setOnEditorActionListener(new OnEditorActionListener() {
 			@Override
@@ -57,6 +69,9 @@ public class MainActivity extends ActionBarActivity {
 						x = x.setScale(3, java.math.BigDecimal.ROUND_HALF_UP);
 						RESULT.setTextColor(Color.parseColor("#4285F4"));
 						RESULT.setText(getString(R.string.res) + " " + x + "em");
+						list.add(PX.getText().toString() + "px " + "= " + x
+								+ "em");
+						adapter.notifyDataSetChanged();
 					}
 					handled = true;
 				}
@@ -86,6 +101,8 @@ public class MainActivity extends ActionBarActivity {
 					x = x.setScale(3, java.math.BigDecimal.ROUND_HALF_UP);
 					RESULT.setTextColor(Color.parseColor("#4285F4"));
 					RESULT.setText(getString(R.string.res) + " " + x + "em");
+					list.add(PX.getText().toString() + "px " + "= " + x + "em");
+					adapter.notifyDataSetChanged();
 				}
 			}
 

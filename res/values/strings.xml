@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="action_info">About app</string>
+    <string name="action_info">About App</string>
     <string name="action_support">Support</string>
     <string name="action_table">Baseline Values</string>
     <string name="app_name">PX to EM</string>
