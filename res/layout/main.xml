@@ -2,13 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context="ru.sezex.pxtoem.MainActivity" >
 
     <EditText
         android:id="@+id/px"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/result"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="10dp"
@@ -24,8 +25,8 @@
         android:id="@+id/CleanButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/result"
         android:layout_alignLeft="@+id/px"
+        android:layout_below="@+id/px"
         android:text="@string/clean" />
 
     <Button
@@ -37,17 +38,6 @@
         android:layout_toRightOf="@+id/CleanButton"
         android:text="@string/convert" />
 
-    <TextView
-        android:id="@+id/result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/ConvertButton"
-        android:gravity="center"
-        android:text=""
-        android:textSize="16sp" />
-
     <ListView
         android:id="@+id/historyListView"
         android:layout_width="match_parent"
@@ -55,7 +45,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/result" >
+        android:layout_below="@+id/CleanButton"
+        android:background="#FCFCFC" >
     </ListView>
 
 </RelativeLayout>

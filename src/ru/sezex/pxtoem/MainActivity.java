@@ -1,12 +1,10 @@
 package ru.sezex.pxtoem;
 
 import java.util.ArrayList;
-
 import android.support.v7.app.ActionBarActivity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
 import android.net.Uri;
 import android.view.KeyEvent;
 import android.os.Bundle;
@@ -20,13 +18,16 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
+import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity {
 
 	double a, b, c;
-	TextView RESULT;
 	EditText PX;
 	ListView HISTORY;
+	final ArrayList<String> list = new ArrayList<String>();
+
+	ArrayAdapter<String> adapter;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -35,12 +36,8 @@ public class MainActivity extends ActionBarActivity {
 
 		getSupportActionBar().setElevation(0);
 
-		RESULT = (TextView) findViewById(R.id.result);
 		PX = (EditText) findViewById(R.id.px);
 		HISTORY = (ListView) findViewById(R.id.historyListView);
-
-		final ArrayList<String> list = new ArrayList<String>();
-		final ArrayAdapter<String> adapter;
 		adapter = new ArrayAdapter<String>(this,
 				android.R.layout.simple_list_item_1, list);
 		HISTORY.setAdapter(adapter);
@@ -61,15 +58,14 @@ public class MainActivity extends ActionBarActivity {
 					}
 
 					if (PX.getText().toString().equals("")) {
-						RESULT.setTextColor(Color.parseColor("#F44336"));
-						RESULT.setText(getString(R.string.error));
+						Toast ERROR = Toast.makeText(getApplication(),
+								R.string.error, Toast.LENGTH_SHORT);
+						ERROR.show();
 					} else {
 						c = a / b;
 						java.math.BigDecimal x = new java.math.BigDecimal(c);
 						x = x.setScale(3, java.math.BigDecimal.ROUND_HALF_UP);
-						RESULT.setTextColor(Color.parseColor("#4285F4"));
-						RESULT.setText(getString(R.string.res) + " " + x + "em");
-						list.add(PX.getText().toString() + "px " + "= " + x
+						list.add(0, PX.getText().toString() + "px " + "= " + x
 								+ "em");
 						adapter.notifyDataSetChanged();
 					}
@@ -93,15 +89,15 @@ public class MainActivity extends ActionBarActivity {
 				}
 
 				if (PX.getText().toString().equals("")) {
-					RESULT.setTextColor(Color.parseColor("#F44336"));
-					RESULT.setText(getString(R.string.error));
+					Toast ERROR = Toast.makeText(getApplication(),
+							R.string.error, Toast.LENGTH_SHORT);
+					ERROR.show();
 				} else {
 					c = a / b;
 					java.math.BigDecimal x = new java.math.BigDecimal(c);
 					x = x.setScale(3, java.math.BigDecimal.ROUND_HALF_UP);
-					RESULT.setTextColor(Color.parseColor("#4285F4"));
-					RESULT.setText(getString(R.string.res) + " " + x + "em");
-					list.add(PX.getText().toString() + "px " + "= " + x + "em");
+					list.add(0, PX.getText().toString() + "px " + "= " + x
+							+ "em");
 					adapter.notifyDataSetChanged();
 				}
 			}
@@ -112,7 +108,6 @@ public class MainActivity extends ActionBarActivity {
 		CleanButton.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
 				PX.setText("");
-				RESULT.setText("");
 			}
 		});
 	}
@@ -129,6 +124,10 @@ public class MainActivity extends ActionBarActivity {
 		if (id == R.id.table) {
 			Intent tobase = new Intent(MainActivity.this, TableActivity.class);
 			startActivity(tobase);
+		}
+		if (id == R.id.remove_history) {
+			list.clear();
+			adapter.notifyDataSetChanged();
 		}
 		if (id == R.id.support) {
 			Intent intent = new Intent(Intent.ACTION_VIEW,
