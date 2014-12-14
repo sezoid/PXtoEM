@@ -26,7 +26,6 @@ public class MainActivity extends ActionBarActivity {
 	EditText PX;
 	ListView HISTORY;
 	final ArrayList<String> list = new ArrayList<String>();
-
 	ArrayAdapter<String> adapter;
 
 	@Override

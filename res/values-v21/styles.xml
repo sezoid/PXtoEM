@@ -1,6 +1,8 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:dialogTheme">@style/Dialog</item>
+        <item name="android:alertDialogTheme">@style/Dialog</item>
         <item name="android:colorButtonNormal">#4285F4</item>
         <item name="android:buttonStyle">@style/Button</item>
         <item name="colorAccent">#4285F4</item>
@@ -8,7 +10,11 @@
         <item name="colorPrimaryDark">#2A56C6</item>
     </style>
 
-    <style name="Button" parent="@android:style/Widget.Material.Button">
+    <style name="Dialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">#4285F4</item>
+    </style>
+
+    <style name="Button" parent="@android:style/Widget.Material.Light.Button">
         <item name="android:textColor">#FFFFFF</item>
     </style>
 
