@@ -52,18 +52,20 @@ public class MainActivity extends ActionBarActivity {
 					b = 0;
 				}
 
-				if (BASE.getText().toString().equals("")) {
-					Toast ERROR2 = Toast.makeText(getApplication(),
-							R.string.error2, Toast.LENGTH_SHORT);
-					ERROR2.show();
-				} else if (PX.getText().toString().equals("")) {
+				if (BASE.getText().toString().equals("")
+						&& PX.getText().toString().length() > 0) {
 					Toast ERROR = Toast.makeText(getApplication(),
-							R.string.error, Toast.LENGTH_SHORT);
+							R.string.error, Toast.LENGTH_LONG);
 					ERROR.show();
+				} else if (PX.getText().toString().equals("")
+						&& BASE.getText().toString().length() > 0) {
+					Toast ERROR2 = Toast.makeText(getApplication(),
+							R.string.error2, Toast.LENGTH_LONG);
+					ERROR2.show();
 				} else if (BASE.getText().toString().equals("")
 						&& PX.getText().toString().equals("")) {
 					Toast ERROR3 = Toast.makeText(getApplication(),
-							R.string.error3, Toast.LENGTH_SHORT);
+							R.string.error3, Toast.LENGTH_LONG);
 					ERROR3.show();
 				} else {
 					c = a / b;
@@ -101,7 +103,7 @@ public class MainActivity extends ActionBarActivity {
 		if (id == R.id.remove_history) {
 			if (list.isEmpty()) {
 				Toast ERROR4 = Toast.makeText(getApplication(),
-						R.string.error4, Toast.LENGTH_SHORT);
+						R.string.error4, Toast.LENGTH_LONG);
 				ERROR4.show();
 			} else {
 				list.clear();

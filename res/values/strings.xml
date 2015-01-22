@@ -7,10 +7,10 @@
     <string name="app_name">PX to EM</string>
     <string name="clean">Clean</string>
     <string name="convert">Convert</string>
-    <string name="error">Error: enter a number of pixels!</string>
-    <string name="error2">Error: enter a base pixel size!</string>
+    <string name="error">Error: enter a base pixel size!</string>
+    <string name="error2">Error: enter a number of pixels!</string>
     <string name="error3">Error: the input fields are empty!</string>
-    <string name="error4">Error: history is empty!</string>
+    <string name="error4">History is empty!</string>
     <string name="hint">Enter a number of pixels</string>
     <string name="hint2">Enter a base pixel size</string>
     <string name="history">Show/hide history</string>

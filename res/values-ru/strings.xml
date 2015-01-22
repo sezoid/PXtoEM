@@ -7,10 +7,10 @@
     <string name="app_name">PX в EM</string>
     <string name="clean">Очистить</string>
     <string name="convert">Конвертировать</string>
-    <string name="error">Ошибка: введите число пикселей!</string>
-    <string name="error2">Ошибка: введите базовое значение!</string>
+    <string name="error">Ошибка: введите базовое значение!</string>
+    <string name="error2">Ошибка: введите число пикселей!</string>
     <string name="error3">Ошибка: поля пусты!</string>
-    <string name="error4">Ошибка: история пуста!</string>
+    <string name="error4">История пуста!</string>
     <string name="hint">Введите число пикселей</string>
     <string name="hint2">Введите базовое значение</string>
     <string name="history">Показать/скрыть историю</string>
