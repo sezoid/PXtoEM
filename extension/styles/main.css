@@ -1,0 +1,126 @@
+@import "http://webfonts.ru/import/roboto.css";
+
+* {
+  -moz-box-sizing: border-box;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-transition: 0.5s;
+  -o-user-select: none;
+  -webkit-box-sizing: border-box;
+  -webkit-transition: 0.5s;
+  -webkit-user-select: none;
+  border: none;
+  box-sizing: border-box;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  transition: 0.5s;
+  user-select: none;
+}
+
+html, body {
+  background-color: #212121;
+  color: #FCFCFC;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 100%/1.5em;
+}
+
+input {
+  -webkit-box-shadow: 0 0.125em 0.33em rgba(0, 0, 0, .16), 0 0.125em 0.33em rgba(0, 0, 0, .23);
+  margin: 0 0 1em 0;
+  width: 90%;
+}
+
+input[type='text'] {
+  background: #FCFCFC;
+  border: 0;
+  border-radius: 0.25em;
+  display: block;
+  line-height: 3.188em;
+  margin: 1.5em 0 0 0;
+  opacity: 0.85;
+  padding: 0.1em 1.5em;
+  width: 100%;
+}
+
+input[type='text']:focus {
+  opacity: 1;
+}
+
+input[type='text']:hover {
+  opacity: 1;
+}
+
+input[type='text'].custom-base {
+  margin: 0 0 2em 0;
+}
+
+.wrapper {
+  padding: 1em;
+}
+
+.convert-button {
+  -webkit-box-shadow: 0 0.125em 0.33em rgba(0, 0, 0, .16), 0 0.125em 0.33em rgba(0, 0, 0, .23);
+  background: #3F51B5;
+  border-radius: 0.25em;
+  color: #FCFCFC;
+  cursor: pointer;
+  display: block;
+  font-size: 1.2em;
+  margin: 1.5em 0 0 0;
+  opacity: 0.85;
+  padding: 1em 1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.convert-button:hover {
+  opacity: 1;
+}
+
+.custom-result {
+  -moz-user-select: text;
+  -ms-user-select: text;
+  -o-user-select: text;
+  -webkit-user-select: text;
+  color: #ffffff;
+  margin: 0.5em 0.5em 0 0.5em;
+  text-align: center;
+  user-select: text;
+}
+
+#appbar {
+  -webkit-app-region: drag;
+  background: #212121;
+  clear: both;
+  overflow: hidden;
+  padding: 1.5em;
+}
+
+#appbar #title {
+  color: #ffffff;
+  display: block;
+  float: left;
+  font-size: 1.5em;
+}
+
+#appbar svg#close,
+#appbar svg#hide {
+  cursor: pointer;
+  display: block;
+  float: right;
+  opacity: 0.65;
+}
+
+#appbar svg#close {
+  -webkit-app-region: no-drag;
+}
+
+#appbar svg#hide {
+  -webkit-app-region: no-drag;
+}
+
+#appbar svg#close:hover,
+#appbar svg#hide:hover {
+  opacity: 1;
+}

@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "short_name": "PXtoEM",
+  "description": "Converter PX to EM for Web-Developers.\n\n\nAuthor: http://sezex.ru/\nSource code: https://github.com/sezoid/PXtoEM",
+  "name": "PXtoEM",
+  "version": "1.0",
+  "minimum_chrome_version": "23",
+  "icons": {
+    "16": "icon_16.png",
+    "128": "icon_128.png"
+  },
+  "app": {
+    "background": {
+      "scripts": ["main.js"],
+      "height": 315,
+      "width": 290,
+      "minHeight":315,
+      "minWidth":290,
+      "maxHeight":315,
+      "maxWidth":290
+    }
+  }
+}
