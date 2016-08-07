@@ -11,18 +11,6 @@ $(function () {
     var base = window.base_font_size || 16,
         selected = window.selected_font_size || 16;
 
-    function load_css () {
-        $.ajax({
-            url: 'styles/normalize.css',
-            success: function (d) {
-                var base_size = selected / base;
-                var string = d.replace(/{{ base_font_size_px }}/g, (base_size * 16) + 'px').replace(/{{ base_font_size_em }}/g, base_size + 'em');
-                $('#css .content').html(string);
-                highlight();
-            }
-        });
-    };
-
     (function () {
         var $custom_base = $('.custom-base'),
             $custom_px = $('.custom-px'),
@@ -77,25 +65,6 @@ $(function () {
         $convert_button.on('click', function (e) {
             e.preventDefault();
             do_calc();
-        });
-    })();
-
-    (function () {
-        var current_page = '#convert';
-        var $pages = $('.page');
-
-        $('.menu').on('click', '.menu-item-link', function (e) {
-            e.preventDefault();
-            var $el = $(this);
-            var page = $el.attr('href');
-            if (page == current_page) {
-                return;
-            }
-            $pages.addClass('hide').filter(current_page = page).removeClass('hide');
-            $el.closest('li').addClass('current').siblings().removeClass('current');
-            if (page == '#css') {
-                load_css();
-            }
         });
     })();
 });
