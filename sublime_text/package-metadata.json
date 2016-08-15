@@ -1,0 +1,9 @@
+{
+	"sublime_text": "*",
+	"platforms": ["*"],
+	"version": "1.0",
+	"dependencies": [],
+	"name": "PXtoEM",
+	"description": "Sublime Text 3 plugin to convert px to em with comments",
+	"url": "https://github.com/sezoid/pxtoem/sublime/"
+}
