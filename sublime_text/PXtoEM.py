@@ -14,7 +14,7 @@ def replace_px(css):
     new_css = re.sub(r'\d+px',em,css,1)
     return re.sub(r'\s/\d+',"",new_css,1) + comment
 
-class PxToEmCommand(sublime_plugin.TextCommand):
+class PXtoEMCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         for region in self.view.sel():
             selection = self.view.line(region)

@@ -113,7 +113,7 @@ public class MainActivity extends ActionBarActivity {
         }
         if (id == R.id.support) {
             Intent intent = new Intent(Intent.ACTION_VIEW,
-                    Uri.parse("mailto:roman@sezex.ru?subject=PXtoEM"));
+                    Uri.parse("mailto:sezyara@gmail.com?subject=PXtoEM"));
             startActivity(intent);
         }
         if (id == R.id.info) {
@@ -128,7 +128,7 @@ public class MainActivity extends ActionBarActivity {
                                                     int id) {
                                     Intent intent = new Intent(
                                             Intent.ACTION_VIEW, Uri
-                                            .parse("http://sezex.ru/works/pxtoem/"));
+                                            .parse("https://romansultanov.ru/works/pxtoem/"));
                                     startActivity(intent);
                                 }
                             })
