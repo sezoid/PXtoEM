@@ -1,4 +1,4 @@
-PXtoEM v2.1
+PXtoEM v2.1 (DEPRECATED)
 ======
 
 Converter from PX to EM for Web-Developers.
