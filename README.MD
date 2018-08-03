@@ -1,13 +1,13 @@
-PXtoEM v2.1 (DEPRECATED)
+PXtoEM v3.0 (DEPRECATED)
 ======
 
 Converter from PX to EM for Web-Developers.
 
 <b>Languages:</b>
 - English (only for Android)
-- Russian (for Web, Google Chrom and Android)
+- Russian (for Web, Google Chrome and Android)
 
-<a href="https://romansultanov.ru/works/pxtoem/">Web-Service</a><br>
+<a href="https://romansultanov.ru/works/pxtoem/">Web-version</a><br>
 <a href="https://romansultanov.ru/PXtoEM.apk">Download app (Android OS)</a><br>
 <a href="https://romansultanov.ru/PXtoEM.crx">Download app (Google Chrome)</a><br>
 <a href="https://romansultanov.ru/PXtoEM.sublime-package">Download plugin for Sublime Text 3</a><br>

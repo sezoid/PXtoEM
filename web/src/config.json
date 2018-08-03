@@ -1,0 +1,34 @@
+{
+	"base": 16,
+	"px": "0",
+	"em": "0",
+	"titlebar": {
+		"logo": "/assets/images/logo.svg",
+		"links": [{
+			"id": 0,
+			"title": "Загрузки",
+			"url": "/#downloads"
+		}, {
+			"id": 1,
+			"title": "Исходный код",
+			"url": "https://github.com/sezoid/pxtoem/"
+		}, {
+			"id": 2,
+			"title": "Поддержка",
+			"url": "mailto:sezyara@gmail.com?subject=PXtoEM"
+		}]
+	},
+	"download": [{
+		"id": 0,
+		"title": "Android",
+		"url": "/PXtoEM.apk"
+	}, {
+		"id": 1,
+		"title": "Chrome",
+		"url": "/PXtoEM.crx"
+	}, {
+		"id": 2,
+		"title": "Sublime Text 3",
+		"url": "/PXtoEM.sublime-package"
+	}]
+}

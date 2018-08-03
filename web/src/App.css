@@ -1,0 +1,37 @@
+* {
+	appearance: none;
+	border: 0;
+	box-sizing: border-box;
+	margin: 0;
+	outline: 0;
+	padding: 0
+}
+
+html, body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 100%
+}
+body {
+	background-color: white;
+	color: rgba(0, 0, 0, 0.64)
+}
+img {
+	height: auto;
+	vertical-align: bottom;
+	width: 100%
+}
+.App {
+	animation: 0.5s start linear
+}
+.App main {
+	margin: 0 auto;
+	max-width: 64.5em
+}
+@keyframes start {
+	from {
+		opacity: 0
+	}
+	to {
+		opacity: 1
+	}
+}

@@ -1,0 +1,50 @@
+.Converter {
+	display: flex;
+	flex-flow: column nowrap
+}
+.Converter .Input {
+	display: flex;
+	flex-flow: column nowrap;
+	margin: 0 0 0.75em 0
+}
+.Converter .Input:last-child {
+	margin: 0
+}
+.Converter .Input input[type='text'] {
+	background-color: rgba(0, 0, 0, 0.03);
+	border-radius: 0.25em;
+	color: rgba(38,38,38,.55);
+	font-size: 0.8125em;
+	margin: 0 1.5em;
+	padding: 0.75em;
+	transition: background-color 0.3s
+}
+.Converter .Input input[type='text']:focus {
+	background-color: rgba(0, 0, 0, 0.06)
+}
+.Converter .Input input[type='text']:last-child {
+	margin: 0.75em 1.5em 0 1.5em
+}
+.Converter .Input .Info {
+	align-items: center;
+	display: flex;
+	flex-flow: row nowrap;
+	font-size: 0.875em;
+	margin: 0 1.5em 0.375em 1.5em
+}
+.Converter .Input .Info:first-child {
+	margin: 1.5em 1.5em 0.375em 1.5em
+}
+.Converter .Input .Info label {
+	color: rgba(0, 0, 0, 0.64);
+	font-weight: 400;
+}
+.Converter .Input .Info .Copy {
+	color: #3F51B5;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0 0 0 auto
+}
+.Converter .Input .Info .Copy:hover {
+	text-decoration: underline
+}

@@ -1,0 +1,66 @@
+.Titlebar {
+	align-items: center;
+	display: flex;
+	flex-flow: row nowrap;
+	margin: 0 auto;
+	max-width: 62.5em
+}
+.Titlebar:before {
+	background-color: #3F51B5;
+	box-shadow: 0 0.0625em 0.0625em 0.125em rgba(63, 81, 181, 0.06), 0 0.0625em 0.125em 0.25em rgba(63, 81, 181, 0.12);
+	content: '';
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: -1
+}
+.Titlebar,
+.Titlebar:before {
+	height: 4em
+}
+.Titlebar .Logo {
+	line-height: 4em;
+	height: 1.625em;
+	margin: 0 1em;
+	width: 1.625em
+}
+.Titlebar .Nav {
+	align-items: center;
+	display: flex;
+	flex-flow: row nowrap;
+	line-height: 4em;
+	margin: 0 0 0 auto;
+	overflow: hidden
+}
+.Titlebar .Nav a {
+	color: rgba(255, 255, 255, 0.87);
+	font-size: 1em;
+	margin: 0 0.75em;
+	text-decoration: none;
+	transition: color 0.3s;
+	white-space: nowrap
+}
+.Titlebar .Nav a:hover {
+	color: white
+}
+
+@media (max-width: 400px) {
+	.Titlebar {
+		flex-flow: column nowrap;
+		text-align: center
+	}
+	.Titlebar,
+	.Titlebar:before {
+		height: 9em
+	}
+	.Titlebar .Logo {
+		margin: 1.75em 1em
+	}
+	.Titlebar .Nav {
+		margin: 0;
+		overflow-x: auto;
+		padding: 0 24px;
+		width: 100%
+	}
+}
